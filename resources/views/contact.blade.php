@@ -10,7 +10,7 @@
 <body>
     <a href="/">home</a>
     <a href="/about">about</a>
-    <h1>Halaman about Galuh</h1> 
+    <h1>Halaman about Galuh</h1>
     <h3>Owner : {{ $nama }}</h3>
     <img src="img/animew.png" alt="Galuh Ganteng" width="">
 </body>
