@@ -38,8 +38,13 @@ class post
             ]
         ];
     }
-    public static function find($slug)
+    public static function find($slug) : array
     {
-        return Arr::first(Static::all(), fn($post) => $post['slug'] === $slug);
+        $post = Arr::first(Static::all(), fn($post) => $post['slug'] === $slug);
+
+        if ( ! $post) {
+            abort(404, 'Post not found');
+        }
+        return $post;
     }
 }
