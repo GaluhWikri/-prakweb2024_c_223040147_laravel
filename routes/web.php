@@ -3,22 +3,18 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Home Page']);
 });
 
 Route::get('/about', function () {
-    return view('about', ['nama' => 'Galuh wikri']);
+    return view('about', ['nama' => 'Galuh wikri','title' => 'About']);
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog', ['title' => 'Blog']);
 });
 
 Route::get('/contact', function () {
     return view('contact', ['title' => 'Contact']);
 });
 
-Route::get('/posts', function () {
-
-    return view('posts',  ['title' => 'Blog', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->paginate(9)->withQueryString()]);
-});
