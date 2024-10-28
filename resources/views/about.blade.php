@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a href="/">home</a>
-    <a href="/about">about</a>
-    <h1>Halaman about Galuh</h1> 
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <h1>Halaman about Galuh</h1>
     <h3>Owner : {{ $nama }}</h3>
     <img src="img/animew.png" alt="Galuh Ganteng" width="">
 </body>
