@@ -13,7 +13,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/posts', function () {
-    return view('posts', ['title' => 'posts', 'posts' => Post::all() ]);
+    return view('posts', ['title' => 'blog', 'posts' => Post::all() ]);
 });
 
 route::get('/posts/{post:slug}', function (Post $post) {
