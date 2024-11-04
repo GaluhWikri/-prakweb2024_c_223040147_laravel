@@ -19,17 +19,18 @@ Route::get('/posts', function () {
 });
 
 route::get('/posts/{post:slug}', function (Post $post) {
-
+//    $posts = post::with(['category', 'author'])->latest()->get();
+    $posts = Post::latest()->get();
     return view('post', ['title' => 'Single post' , 'post' => $post ]);
 });
 
 route::get('/authors/{user:username}', function (user $user) {
-
+     $posts = $user->posts->load('category', 'author');
     return view('posts', ['title' => count($user->posts). 'Articles by ' . $user->name, 'posts' => $user->posts ]);
 });
 
 route::get('/categories/{category:slug}', function (Category $category) {
-
+//     $posts = $category->posts->load('category', 'author');
     return view('posts', ['title' => 'Articcles in : ' . $category->name, 'posts' => $category->posts ]);
 });
 
