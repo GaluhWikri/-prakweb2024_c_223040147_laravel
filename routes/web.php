@@ -13,7 +13,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about', ['name' => 'Moch Zuhdi'], ['title' => 'About']);
+    return view('about', ['nama' => 'Galuh'], ['title' => 'About']);
 });
 
 Route::get('/posts', function () {
